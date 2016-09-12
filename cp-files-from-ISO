@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#  Copy all pertinent files from ISO:
+#
+#    isolinux.cfg
+#    ks.preseed
+#    makeISO.sh
+#    txt.cfg
+#
+#    To the current directory, which should be the git repository
+#
+
+# Variables
+ISO_DIR="/opt/ubuntuiso/"
+LOCAL_GIT="."
+
+# Copy files from ISO to local git repo
+cp $ISO_DIR/isolinux/isolinux.cfg $LOCAL_GIT
+cp $ISO_DIR/ks.preseed $LOCAL_GIT
+cp $ISO_DIR/makeISO $LOCAL_GIT
+cp $ISO_DIR/isolinux/txt.cfg $LOCAL_GIT
