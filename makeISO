@@ -40,5 +40,6 @@ mkisofs -D -r -V "UNATTENDED_UBUNTU" -cache-inodes -J -l -b isolinux/isolinux.bi
 # Not required
 # Move ISO to specified user's Document directory
 if ! [ -z $1 ] ; then
+    rm /home/${USER_NAME}/Documents/ubuntu-${DISTRO}-unattended-install.iso
     cp $HOME/UbuntuUnattendedISO/ubuntu-${DISTRO}-unattended-install.iso /home/${USER_NAME}/Documents/
 fi
